@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "_base.scss",
+	"sources": [
+		"../abstracts/_abstracts.scss",
+		"../abstracts/variables/_colors.scss",
+		"../abstracts/variables/_typography.scss",
+		"../abstracts/variables/_structure.scss",
+		"../abstracts/variables/_columns.scss",
+		"../abstracts/mixins/_mixins.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

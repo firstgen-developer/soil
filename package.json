@@ -1,0 +1,51 @@
+{
+  "name": "FG Base",
+  "version": "1.0.0",
+  "description": "Hi. I'm a starter theme called fgbase_",
+  "author": "First Generation",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "https://github.com/Automattic/fgbase_#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Automattic/fgbase_.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Automattic/fgbase_/issues"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^6.2.0",
+    "dir-archiver": "^1.1.1",
+    "node-sass": "^7.0.1",
+    "rtlcss": "^3.5.0"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "watch": "node-sass sass -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w --recursive",
+    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "compile:rtl": "rtlcss style.css style-rtl.css",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'js/*.js'",
+    "bundle": "dir-archiver --src . --dest ../fgbase_.zip --exclude .DSfgbase_tore .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0",
+    "gulp-sass": "^5.1.0"
+  }
+}

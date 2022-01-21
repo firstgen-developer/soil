@@ -1,0 +1,14 @@
+body {
+	background: $color__background-body; // Fallback for when there is no custom background color defined.
+    margin-bottom: 0 !important;
+}
+
+.site-header {
+}
+
+
+.header-img {
+    object-fit: cover;
+    width: 100%;
+}
+
